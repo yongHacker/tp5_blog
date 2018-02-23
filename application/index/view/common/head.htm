@@ -1,0 +1,22 @@
+<div class="ladytop">
+    <div class="nav">
+        <div class="left"><a href="{:url('Index/index')}"><img src="__PUBLIC__/images/hunshang.png" alt="网站Logo"></a></div>
+        <div class="right">
+            <div class="box">
+                <a href="{:url('Index/index')}" >首页</a>
+                {volist name="cateres" id="vo"}
+                    <a href="{:url('cate/index',array('cateid'=>$vo.id))}" >{$vo.catename}</a>
+                {/volist}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hotmenu">
+    <div class="con">
+        热门标签：
+        {volist name="tagres" id="vo"}
+        <a href="http://localhost:82/tp5/public/index.php/index/search/index.html?keywords={$vo.tagname}">{$vo.tagname}</a>
+        {/volist}
+    </div>
+</div>
